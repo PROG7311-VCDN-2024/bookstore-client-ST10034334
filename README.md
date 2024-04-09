@@ -1,8 +1,7 @@
-<center>
-<h3>PROG7311 SPRINT 3</h3>
+
+<h3 center>PROG7311 SPRINT 3</h3>
 <h3>READ ME FILE</h3>
 <h3>ST10034334 + ST10245621</h3>
-</center>
 <br><br>
 
 
@@ -42,8 +41,9 @@ Firebase Console was used to handle user authentication and stores data such as 
 Step 1: Copy the link to the GitHub repository and paste it into the top search bar in your browser. <br>
 Step 2: Click on the green "Code" button and select the option to "Download ZIP". <br>
 
-
+<center>
 ![image](https://github.com/PROG7311-VCDN-2024/bookstore-client-ST10034334/assets/101701375/b186ac13-db48-4fef-91c7-bf7dc6dbcb1b)
+</center>
 
 
 
