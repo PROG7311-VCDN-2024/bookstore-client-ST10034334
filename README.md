@@ -15,10 +15,10 @@
 
 <br>
 <h2>PROJECT DESCRIPTION:</h2> <br>
-PROJECT TITLE: FIND YOUR STORY <br>
-Discover a whole new way to shop for your favourite books with Find Your Story! Our platform offers an intuitive and user-friendly experience for everyone involved, including Customers and Admins. <br>
-Explore a vast library of books, complete with detailed descriptions and eye-catching cover images. With our smart search feature, finding the perfect book is as easy as typing in the title or even just a part of it. <br>
-Admins have full control over the platform, from adding new books to adjusting prices and managing user accounts. Customers can create their own profiles, browse through books, and add them to their cart for easy checkout through our secure payment gateway. <br>
+PROJECT TITLE: FIND YOUR STORY <br><br>
+Discover a whole new way to shop for your favourite books with Find Your Story! Our platform offers an intuitive and user-friendly experience for everyone involved, including Customers and Admins. <br><br>
+Explore a vast library of books, complete with detailed descriptions and eye-catching cover images. With our smart search feature, finding the perfect book is as easy as typing in the title or even just a part of it. <br><br>
+Admins have full control over the platform, from adding new books to adjusting prices and managing user accounts. Customers can create their own profiles, browse through books, and add them to their cart for easy checkout through our secure payment gateway. <br><br>
 We are committed to delivering your favourite books to you in an easy and user-friendly manner. Join us and bring your personal library home with ease! <br><br>
 
 <h2>THE TECHNOLOGIES USED AND WHY:</h2> <br>
