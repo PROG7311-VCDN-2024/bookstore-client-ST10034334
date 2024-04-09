@@ -54,7 +54,7 @@ Application Layer: The application layer houses the core logic and functionality
 Data Layer: The data layer is in charge of constant data storage and retrieval. It is usually made up of a database and additional data stores like files and web services (Jagoda, 2024), which is a particular kind of web-accessible API, such RESTful APIs (Bigelow & Lewis, 2024). These data stores ensure that the application has access to the necessary information to function properly.<br><br>
 Within this architecture, APIs play a crucial role in facilitating communication between different software products. An API, or Application Programming Interface, enables data transmission by defining the terms of this exchange. In the context of web applications, the client-side program, or frontend, interacts with the server-side logic and database operations through APIs. This interaction occurs via a request-response mechanism, where the client sends a request to the server, which then processes the request and sends back a response through APIs  acting as the middleman (AltexSoft, 2022).<br><br>
 
-Let's now take a look at some web application architecures, namely monolithci and microservices.<br><br>
+Let's now take a look at some web application architecures, namely monolithic and microservices.<br><br>
 
 MONOLITHIC ARCHITECTURE<br>
 The simplest and most conventional model is the monolithic architecture. In this setup, every part of the web application comes from a single codebase. That means everything – from the database access logic and business rules to the user interface – is bundled together. Plus, all these parts run in the same environment (Jagoda, 2024). <br><br>
@@ -66,6 +66,7 @@ In today's web applications, we use microservices. This means breaking down big 
 <h2>PROS AND CONS OF MONOLITHIC AND MICROSERVICES:</h2> <br>
 
 MONOLITHIC:<br>
+
 PROS:<br>
 •	Having less moving parts reduces difficulty.<br>
 •	Simplifies development and upkeep with a single codebase.<br>
