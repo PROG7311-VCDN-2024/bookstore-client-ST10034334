@@ -8,9 +8,16 @@
 <h3>TABLE OF CONTENTS</h3>
 • Project Description <br>
 • The Technologies Used And Why	 <br>
-• How To Install Find Your Story (Via Github)  	<br>
+• Introduction to Web Application Architecture <br>
+• Pros And Cons of Monolithic And Microservices <br>
+• Why The Change (Monolithic to Microservices) <br>
+• Find Your Story Architecture Diagram <br>
+• How To Install Find Your Story (Via Github)  <br>
 • How To Run/Use Find Your Story Website: Customer Point Of View  <br>
 • How To Run/Use Find Your Story Website: Admin Point Of View  <br>
+• Reference List
+
+
 
 
 <br>
@@ -25,17 +32,76 @@ We are committed to delivering your favourite books to you in an easy and user-f
 The technologies used to create Find Your Story are the following: <br><br>
 1. Visual Studio 2022. <br>
 2. ASP.NET Core Web App (Model-View-Controller). <br>
-3. C# Class Library. <br>
+3. ASP.NET Core Web API. <br>
 4. SSMS (SQL Server Management Studio). <br>
 5. Local Browser (Microsoft Edge). <br>
 6. Firebase Console. <br><br>
 
 Visual Studio 2022 was used as the IDE to code this website in C#. <br><br>
-ASP.NET Core Web App (Model-View-Controller) was used to create Find Your Story in the form of a website using models, views, and controllers.<br><br>
-C# Class library was used to store all the models relating to the classes used in the Find your Story application as well as the DBContext for interacting with the database.<br><br>
+ASP.NET Core Web App (Model-View-Controller) was used to create Find Your Story in the form of a website using models, views, and controllers. This is Find Your Story's API Client. <br><br>
+ASP.NET Core Web API was used to store all the models and controllers used in the Find your Story application as well as the DBContext for interacting with the database. This is Find Your Story's API. <br><br>
 SSMS (SQL Server Management Studio) was used to create the SQL database and necessary tables that stores all the information for the Find Your Story application (user data, including registration information, login credentials (through ASP.NET Core Identity), product data, as well as cart data).<br><br>
 Firebase Console was used to handle user authentication and stores data such as email, password, firebase UID, etc., to allow users to register, log in, and log out efficiently.<br><br>
+
+
+
+<h2>INTRODUCTION TO WEB APPLICATION ARCHITECTURE:</h2> <br>
+
+To begin, the architecture of a web application basically refers to how its parts are put together and integrated.
+In a typical web application architecture, there are three primary layers that work together to provide a seamless user experience: <br><br>
+Presentation Layer: This layer is responsible for the visual elements of the web app, including the design of the user interface, navigation, and screen layout. It ensures that users can interact with the application easily and intuitively (Jagoda, 2024).<br><br>
+Application Layer: The application layer houses the core logic and functionality of the web application. Here, business rules are executed, data is manipulated, and user input is processed. This layer often includes one or more web servers where the application code is hosted (Jagoda, 2024). Once developed, the web application needs to be deployed on these servers so that customers are able to use it via the internet (Amazon Web Services, 2024).<br><br>
+Data Layer: The data layer is in charge of constant data storage and retrieval. It is usually made up of a database and additional data stores like files and web services (Jagoda, 2024), which is a particular kind of web-accessible API, such RESTful APIs (Bigelow & Lewis, 2024). These data stores ensure that the application has access to the necessary information to function properly.<br><br>
+Within this architecture, APIs play a crucial role in facilitating communication between different software products. An API, or Application Programming Interface, enables data transmission by defining the terms of this exchange. In the context of web applications, the client-side program, or frontend, interacts with the server-side logic and database operations through APIs. This interaction occurs via a request-response mechanism, where the client sends a request to the server, which then processes the request and sends back a response through APIs  acting as the middleman (AltexSoft, 2022).<br><br>
+
+Let's now take a look at some web application architecures, namely monolithci and microservices.<br><br>
+
+MONOLITHIC ARCHITECTURE<br>
+The simplest and most conventional model is the monolithic architecture. In this setup, every part of the web application comes from a single codebase. That means everything – from the database access logic and business rules to the user interface – is bundled together. Plus, all these parts run in the same environment (Jagoda, 2024). <br><br>
+
+MICROSERVICES ARCHITECTURE<br>
+In today's web applications, we use microservices. This means breaking down big programs into smaller parts that can work on their own. These parts can be deployed separately and talk to each other using APIs (Jagoda, 2024).<br><br>
+
+
+<h2>PROS AND CONS OF MONOLITHIC AND MICROSERVICES:</h2> <br>
+
+MONOLITHIC:<br>
+PROS:<br>
+•	Having less moving parts reduces difficulty.<br>
+•	Simplifies development and upkeep with a single codebase.<br>
+•	Boosts performance by minimizing network requests.<br>
+•	Streamlines troubleshooting and deployment (Jagoda, 2024).<br><br>
+CONS:<br>
+•	Struggles under heavy traffic loads.<br>
+•	Not beneficial to frequent updates or swift development.<br>
+•	Faces obstacles when scaling individual parts.<br>
+•	Impedes code reuse through its limited modularity (Jagoda, 2024).<br><br>
+MICROSERVICES:<br>
+
+PROS:<br>
+•	Offers resilience and scalability, adjusting easily to changes.<br>
+•	Empowers small, independent parts for efficient work.<br>
+•	Enhances fault isolation, ensuring a robust system.<br>
+•	Embraces flexibility by employing various technologies for different tasks (Jagoda, 2024).<br><br>
+CONS:<br>
+•	Introduces difficulty in system architecture.<br>
+•	May experience latency and network issues.<br>
+•	Demands extra effort in testing and building. (Jagoda, 2024).<br>
  
+<h2>WHY THE CHANGE (MONOLITHIC TO MICROSERVICES):</h2> <br>
+
+In our web application, Find Your Story, we have implemented a monolithic architecture for our online bookstore. Currently, the bookstore offers a wide range of services, including user authentication, book cataloguing, shopping cart management, stock monitoring, order tracking, mock payment processing, admin management, and a comprehensive user interface.<br><br>
+
+Given the extent of services provided by the bookstore, transitioning to a microservices architecture entails breaking down these services into smaller, independent components. This approach allows for focused attention on individual components, enabling them to be developed and maintained independently. Consequently, adopting the microservices architecture enhances scalability and performance by offering granular control over resource allocation. Each component can be scaled efficiently as needed, resulting in improved responsiveness and system efficiency (Jagoda, 2024).  <br>
+
+
+<h2>FIND YOUR STORY ARCHITECTURE DIAGRAM:</h2> <br>
+
+<p align="center">
+  <img src="https://github.com/PROG7311-VCDN-2024/bookstore-client-ST10034334/assets/101701375/458d9ab1-5a5e-4dc9-a8a3-2059b03ac7ee">
+</p>
+<br>
+
 <h2>HOW TO INSTALL FIND YOUR STORY (VIA GITHUB):</h2> <br>
 ** This guide on installation uses a sample application, namely “ShoppingCart App” ** <br>
 Step 1: Copy the link to the GitHub repository and paste it into the top search bar in your browser. <br>
@@ -262,6 +328,19 @@ o	When adding a new product, the book cover image is able to be uploaded from fi
 <br>
 
 
+<h2>REFERENCE LIST:</h2> <br>
+AltexSoft. 2022. What is an API: Definition, Types, Specifications, Documentation, 21 November 2022.
+[Online]. Available at: https://www.altexsoft.com/blog/what-is-api-definition-types-specifications-documentation/ 
+[Accessed 20 March 2024].
+Amazon Web Services. 2024. What’s the Difference Between a Web Server and an Application Server, 2024.
+[Online]. Available at: https://aws.amazon.com/compare/the-difference-between-web-server-and-application-server/#:~:text=A%20website%20that%20hosts%20static,and%20require%20an%20application%20server. 
+[Accessed 20 March 2024].
+Bigelow, S.J., Lewis, S. 2024. Web services. TechTarget, March 2024.
+[Online]. Available at: https://www.techtarget.com/searchapparchitecture/definition/Web-services 
+[Accessed 20 March 2024].
+Jagoda, R. 2024. Web Application Architecture [Complete Guide & Diagrams]. Soft Kraft, 2024.
+[Online]. Available at: https://www.softkraft.co/web-application-architecture/#microservices-architecture 
+[Accessed 20 March 2024].
 
 
 
