@@ -1,0 +1,99 @@
+﻿@model FindYourStoryApp.Models.ShippingAddress
+@{
+    ViewBag.Title = "Shipping Address Page";
+}
+
+<head>
+
+    <!--Script for displaying a pop-up dialog once a book has been added to user's cart.-->
+    <script>
+        function displayShipAddressAdded() {
+            //Checks if a message is present in TempData.
+            var message = '@TempData["ShipAddressAdded"]';
+            if (message !== '') {
+                alert(message);
+            }
+        });
+    </script>
+</head>
+
+<br>
+<br>
+<div class="card shadow rounded w-75 mx-auto">
+    <div class="card-body">
+        <div class="pl-1">
+            <p class="card-title h5 text-dark text-uppercase text-center">Shipping Address</p>
+        </div>
+        <br>
+        <br>
+        <form asp-action="AddShippingAddress" method="post" onclick="displayShipAddressAdded">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <!-- Displays the form fields for shipping address -->
+            <div class="form-group">
+                        <div class="pl-1">
+                            <p class="text-dark text-center">
+                <label class="control-label">Address Line 1</label>
+                <input asp-for="AddressLine1" class="form-control" />
+                <span asp-validation-for="AddressLine1" class="text-danger"></span>
+                </p>
+                </div>
+            </div>
+            <div class="form-group">
+                            <div class="pl-1">
+                                <p class="text-dark text-center">
+                <label class="control-label">Address Line 2</label>
+                <input asp-for="AddressLine2" class="form-control" />
+                <span asp-validation-for="AddressLine2" class="text-danger"></span>
+                            </p>
+                        </div>
+            </div>
+            <div class="form-group">
+                                <div class="pl-1">
+                                    <p class="text-dark text-center">
+                <label class="control-label">City</label>
+                <input asp-for="City" class="form-control" />
+                <span asp-validation-for="City" class="text-danger"></span>
+                            </p>
+                        </div>
+            </div>
+            <div class="form-group">
+                                    <div class="pl-1">
+                                        <p class="text-dark text-center">
+                <label class="control-label">State</label>
+                <input asp-for="State" class="form-control" />
+                <span asp-validation-for="State" class="text-danger"></span>
+                            </p>
+                        </div>
+            </div>
+            <div class="form-group">
+                                        <div class="pl-1">
+                                            <p class="text-dark text-center">
+                <label class="control-label">Postal Code</label>
+                <input asp-for="PostalCode" class="form-control" />
+                <span asp-validation-for="PostalCode" class="text-danger"></span>
+                            </p>
+                        </div>
+            </div>
+            <div class="form-group">
+                                            <div class="pl-1">
+                                                <p class="text-dark text-center">
+                <label class="control-label">Country</label>
+                <input asp-for="Country" class="form-control" />
+                <span asp-validation-for="Country" class="text-danger"></span>
+                            </p>
+                        </div>
+            </div>
+            <div class="form-group">
+                <center>
+                <input type="submit" value="Submit" class="btn btn-primary" style="margin-top:30px;" />
+                        </center>
+            </div>
+        </form>
+    </div>
+</div>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+

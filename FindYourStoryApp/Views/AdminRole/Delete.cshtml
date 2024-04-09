@@ -1,0 +1,43 @@
+﻿@model FindYourStoryApp.Models.Role
+
+@{
+    ViewData["Title"] = "Delete";
+}
+<br>
+<br>
+<div class="card shadow rounded w-75 mx-auto">
+    <div class="card-body">
+        <div class="pl-1">
+            <h3 class="card-title h5 text-dark text-uppercase text-center">Delete</h3>
+        </div>
+        <br>
+        <center>
+            <p>Are you sure you want to delete this?</p>
+        </center>
+        <br>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="pl-1">
+                    <p class="text-dark text-center">
+                        <strong>@Html.DisplayNameFor(model => model.RoleType)</strong>
+                    </p>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="pl-1">
+                    <p class="text-dark text-center">
+                        @Html.DisplayFor(model => model.RoleType)
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <center>
+            <form asp-action="Delete">
+                <input type="hidden" asp-for="RoleId" />
+                <input type="submit" value="Delete" class="btn btn-danger" /> |
+                <a asp-action="Index">Back to List</a>
+            </form>
+        </center>
+    </div>
+</div>

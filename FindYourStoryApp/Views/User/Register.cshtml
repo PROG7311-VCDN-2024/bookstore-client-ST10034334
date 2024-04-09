@@ -1,0 +1,83 @@
+﻿@model FindYourStoryApp.Models.User
+@{
+	ViewBag.Title = "Register";
+}
+
+<br>
+<br>
+<div class="card shadow rounded w-75 mx-auto">
+    <div class="card-body">
+        <div class="pl-1">
+            <p class="card-title h5 text-dark text-uppercase text-center">Register</p>
+        </div>
+        <br>
+        <br>
+        <form asp-action="Register">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <!--Displays the form fields for all the model properties in the User class, in addition to, binding and 
+                validating the entered data to those different model properties.
+            -->
+            <div class="form-group">
+              <div class="pl-1">
+                <p class="text-dark text-center">
+                <label class="control-label">First Name</label>
+                <input asp-for="FirstName" class="form-control" />
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+                </p>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="pl-1">
+                    <p class="text-dark text-center">
+                <label class="control-label">Last Name</label>
+                <input asp-for="LastName" class="form-control" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+                    </p>
+                </div>
+            </div>
+            <div class="form-group">
+                    <div class="pl-1">
+                        <p class="text-dark text-center">
+                <label class="control-label">Email</label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+                    </p>
+                </div>
+            </div>
+            <div class="form-group">
+                        <div class="pl-1">
+                            <p class="text-dark text-center">
+                <label class="control-label">Date Of Birth</label>
+                <input asp-for="Dob" class="form-control" type="date" />
+                <span asp-validation-for="Dob" class="text-danger"></span>
+                    </p>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="pl-1">
+                    <p class="text-dark text-center">
+                <label class="control-label">Username</label>
+                <input asp-for="Username" class="form-control" />
+                <span asp-validation-for="Username" class="text-danger"></span>
+                </p>
+            </div>
+            </div>
+            <div class="form-group">
+                            <div class="pl-1">
+                                <p class="text-dark text-center">
+                <label class="control-label">Password</label>
+                <input type="password" name="Password" class="form-control" />
+            </div>      
+            <div class="form-group">
+                <center>
+                <input type="submit" value="Register" class="btn btn-primary" style="margin-top:30px;" />
+            </center>
+            </div>
+        </form>
+    </div>
+</div>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

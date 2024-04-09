@@ -1,0 +1,41 @@
+﻿@model FindYourStoryApp.Models.Role
+
+@{
+    ViewData["Title"] = "Create";
+}
+<br>
+<br>
+<div class="card shadow rounded w-75 mx-auto">
+    <div class="card-body">
+        <div class="pl-1">
+            <p class="card-title h5 text-dark text-uppercase text-center">CREATE ROLE</p>
+        </div>
+        <br>
+        <br>
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <div class="pl-1">
+                    <p class="text-dark text-center">
+                <label asp-for="RoleType" class="control-label"></label>
+                <input asp-for="RoleType" class="form-control" />
+                <span asp-validation-for="RoleType" class="text-danger"></span>
+                    </p>
+                </div>
+            </div>
+            <div class="form-group">
+                <center>
+                <input type="submit" value="Create" class="btn btn-primary" />
+                </center>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

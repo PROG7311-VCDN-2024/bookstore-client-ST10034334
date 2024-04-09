@@ -1,0 +1,56 @@
+﻿@model FindYourStoryApp.Models.User
+@{
+	ViewBag.Title = "Login";
+}
+<br>
+<br>
+<div class="card shadow rounded w-75 mx-auto">
+    <div class="card-body">
+        <div class="pl-1">
+            <p class="card-title h5 text-dark text-uppercase text-center">Login</p>
+        </div>
+        <br>
+        <br>
+        <form asp-action="Login">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <!--Displays the form fields for the username and password model properties in the User class, in addition to, 
+                binding and validating the entered data to the username and password.
+            -->
+            <div class="form-group">
+                <div class="pl-1">
+                    <p class="text-dark text-center">
+                <label class="control-label">Email</label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+                </p>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="pl-1">
+                    <p class="text-dark text-center">
+                <label class="control-label">Password</label>
+                <input type="password" name="Password" class="form-control" />
+                    </p>
+                </div>
+            </div>
+            <div class="form-group">
+                <center>
+                <input type="submit" value="Log In" class="btn btn-primary" style="margin-top:30px;" />
+                </center>
+            </div>
+            <!--TutorialsTeacher (2024) demonstrates how to use a ViewBag.-->
+            <div class="form-group">
+                <p>@ViewBag.LoginError</p>
+            </div>
+        </form>
+    </div>
+</div>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+<!--REFERENCE LIST:
+TutorialsTeacher. 2024. ASP.NET MVC - ViewBag (Version 1.0)
+[Source code] https://www.tutorialsteacher.com/mvc/viewbag-in-asp.net-mvc
+(Accessed 28 February 2024).-->

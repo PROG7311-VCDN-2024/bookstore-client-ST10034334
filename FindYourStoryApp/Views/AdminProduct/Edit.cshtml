@@ -1,0 +1,80 @@
+﻿@model FindYourStoryApp.Models.Product
+
+@{
+    ViewData["Title"] = "Edit";
+}
+<br>
+<br>
+<div class="card shadow rounded w-75 mx-auto">
+    <div class="card-body">
+        <div class="pl-1">
+            <p class="card-title h5 text-dark text-uppercase text-center">EDIT PRODUCT</p>
+        </div>
+        <br>
+        <br>
+        <form asp-action="Edit" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ProductId" />
+            <div class="form-group">
+                <!--Milish (2023) demonstrates how to add images via upload.-->
+                <p class="text-dark text-center">
+                <label asp-for="BookCoverImage" class="control-label"></label>
+                </p>
+                <input type="file" name="imageUpload" class="form-control" />
+                <span asp-validation-for="BookCoverImage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <div class="pl-1">
+                    <p class="text-dark text-center">
+                <label asp-for="Title" class="control-label"></label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+                    </p>
+                </div>
+            </div>
+            <div class="form-group">
+                    <div class="pl-1">
+                        <p class="text-dark text-center">
+                <label asp-for="Author" class="control-label"></label>
+                <input asp-for="Author" class="form-control" />
+                <span asp-validation-for="Author" class="text-danger"></span>
+                        </p>
+                    </div>
+            </div>
+            <div class="form-group">
+                        <div class="pl-1">
+                            <p class="text-dark text-center">
+                <label asp-for="Price" class="control-label"></label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+                            </p>
+                        </div>
+            </div>
+            <div class="form-group">
+                            <div class="pl-1">
+                                <p class="text-dark text-center">
+                <label asp-for="InStock" class="control-label"></label>
+                <input asp-for="InStock" class="form-control" />
+                <span asp-validation-for="InStock" class="text-danger"></span>
+                                </p>
+                            </div>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+<!--REFERENCE LIST:
+Milish, H. 2023. Uploading Files in ASP.NET Core 6 MVC. Devart, 24 March 2023 (Version 1.0)
+[Source code] https://blog.devart.com/uploading-files-in-asp-net-core-6-mvc.html
+(Accessed 12 March 2024).
+-->
