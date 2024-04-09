@@ -22,7 +22,7 @@ Admins have full control over the platform, from adding new books to adjusting p
 We are committed to delivering your favourite books to you in an easy and user-friendly manner. Join us and bring your personal library home with ease! <br><br>
 
 <h2>THE TECHNOLOGIES USED AND WHY:</h2> <br>
-The technologies used to create Find Your Story are the following: <br>
+The technologies used to create Find Your Story are the following: <br><br>
 1. Visual Studio 2022. <br>
 2. ASP.NET Core Web App (Model-View-Controller). <br>
 3. C# Class Library. <br>
@@ -95,9 +95,9 @@ Step 10: Once Double-Clicked, Visual Studio will now open with the application, 
 
 <h2>HOW TO RUN/USE FIND YOUR STORY WEBSITE: CUSTOMER POINT OF VIEW:</h2><br>
 
-Home Page: Find Your Story will begin by showing you a home page, as shown below. The user is presented with a collection of books which includes, a view of the book cover and details associated with each book such as title, author, price, and stock availability. The user is also presented with a “Details” button which allows users to click on and view even more options associated with the selected book.<br>
-The home page also includes a search feature, which allows users to search for books by entering in the title of the book, or even just a part of the title.  <br>
-The user must click on the “Register” or “Login” navigation menu item. If the user does not login or register, the user is unable to view their cart/add to their cart or view their orders. <br>
+Home Page: Find Your Story will begin by showing you a home page, as shown below. The user is presented with a collection of books which includes, a view of the book cover and details associated with each book such as title, author, price, and stock availability. The user is also presented with a “Details” button which allows users to click on and view even more options associated with the selected book.<br><br>
+The home page also includes a search feature, which allows users to search for books by entering in the title of the book, or even just a part of the title.  <br><br>
+The user must click on the “Register” or “Login” navigation menu item. If the user does not login or register, the user is unable to view their cart/add to their cart or view their orders. <br><br>
 In addition, the user will be presented with the Login Page, shown below, if they try to access their cart without having an account. <br>
 
 <p align="center">
@@ -111,7 +111,7 @@ In addition, the user will be presented with the Login Page, shown below, if the
 <br>
 
 
-Register Page: Once the “Register’ menu item is clicked, the Register Page will be shown to the user, as shown below. The user must enter in the required details for the registration. Error messages will be displayed for wrong input. As default, users are assigned the role of a customer and only an admin can change the user role. <br>
+Register Page: Once the “Register’ menu item is clicked, the Register Page will be shown to the user, as shown below. The user must enter in the required details for the registration. Error messages will be displayed for wrong input. As default, users are assigned the role of a customer and only an admin can change the user role. <br><br>
 Once the user has entered in their registration details, the user must click on the “Register” button. This user and their details will be saved to the local database as well as in Firebase Console to allow the user profile to be managed locally and the authentication managed through an online service. Once registered, the user will be automatically logged in.<br>
 
 
@@ -131,7 +131,7 @@ Once the user has entered in their registration details, the user must click on 
 <br>
 
 
-Login Page: Once the “Log In’ menu item is clicked, the Login Page will be shown to the user, as shown below. The user must enter in the required details for the login. Error messages will be displayed for wrong input. Once the user has entered in their login details successfully, the user must click on the “Login” button. This login authentication is also handled through Firebase Console. <br>
+Login Page: Once the “Log In’ menu item is clicked, the Login Page will be shown to the user, as shown below. The user must enter in the required details for the login. Error messages will be displayed for wrong input. Once the user has entered in their login details successfully, the user must click on the “Login” button. This login authentication is also handled through Firebase Console. <br><br>
 The user will now have the ability to use the website to add books to their cart, view their cart, and their orders. Once logged in, the user will be presented with the Home Page again. In addition, if the user has failed to login, a false login attempt will be written to a text file along with the email of the user committing this false login attempt and the date and time on which this occurred for analysing purposes. This recording of false logins was completed through using the logger service which follows the singleton design pattern. <br>
 
 <p align="center">
