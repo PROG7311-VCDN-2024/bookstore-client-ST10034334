@@ -5,8 +5,8 @@
 
 
 <h3>TABLE OF CONTENTS</h3>
-• Project Description  
-• The Technologies Used And Why	 
+• Project Description <br>
+• The Technologies Used And Why	 <br>
 • How To Install Find Your Story (Via Github)  	
 • How To Run/Use Find Your Story Website: Customer Point Of View  
 • How To Run/Use Find Your Story Website: Admin Point Of View  
