@@ -28,7 +28,7 @@ The technologies used to create Find Your Story are the following: <br>
 3. C# Class Library. <br>
 4. SSMS (SQL Server Management Studio). <br>
 5. Local Browser (Microsoft Edge). <br>
-6. Firebase Console. <br>
+6. Firebase Console. <br><br>
 
 Visual Studio 2022 was used as the IDE to code this website in C#. <br><br>
 ASP.NET Core Web App (Model-View-Controller) was used to create Find Your Story in the form of a website using models, views, and controllers.<br><br>
