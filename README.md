@@ -1,7 +1,9 @@
+<center>
 <h3>PROG7311 SPRINT 3</h3>
 <h3>READ ME FILE</h3>
 <h3>ST10034334 + ST10245621</h3>
-
+</center>
+<br><br>
 
 
 <h3>TABLE OF CONTENTS</h3>
